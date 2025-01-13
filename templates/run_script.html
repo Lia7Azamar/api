@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecutar Script</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        pre {
+            font-size: 18px;  /* Aumentar el tamaño de la fuente */
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resultado del script: {{ script_name }}</h1>
+    
+    <h2>Salida:</h2>
+    <pre>{{ result }}</pre>
+
+    <h2>Gráficas:</h2>
+    {% for graph in graphs %}
+        <img src="data:image/png;base64,{{ graph }}" alt="Gráfico">
+    {% endfor %}
+
+    <br><br>
+    <a href="/">Volver a la lista de scripts</a>
+</body>
+</html>

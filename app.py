@@ -8,7 +8,7 @@ from subprocess import run
 app = Flask(__name__)
 
 # Ruta al directorio donde están tus archivos (Simulacion)
-SIMULACION_DIR = os.path.join(os.path.expanduser('~'), 'Documentos', 'Simulacion')
+SIMULACION_DIR = os.path.join(os.path.dirname(__file__), 'Simulacion')
 
 @app.route('/')
 def list_scripts():

@@ -33,7 +33,7 @@ graphs = []
 
 
 # Cargar el dataset
-df = pd.read_csv('/home/lia/Documentos/Simulacion/Darknet.CSV')
+df = pd.read_csv('Simulacion/Darknet.CSV')
 
 # Ver las primeras filas del dataset
 print(df.head())
